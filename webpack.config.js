@@ -11,7 +11,7 @@ module.exports = function (env, argv) {
     externals: {
       axios: "axios",
     },
-    devtool: false,
+    devtool: argv.mode === "production" ? false : 'eval',
     plugins: [],
   };
 };
